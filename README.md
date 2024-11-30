@@ -2,6 +2,78 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
 
+## Install Angular CLI locally and create a new empty workspace.
+
+  See: https://v17.angular.io/guide/file-structure#multiple-projects
+
+  > npx -p @angular/cli ng new my-workspace --no-create-application
+
+## Create an application in the workspace.
+
+  > cd my-workspace
+  > npx ng generate application deep-dive-app-1 (css, n)
+
+## Create a library in the workspace.
+
+  See: https://v17.angular.io/guide/creating-libraries
+
+  > ng generate library deep-dive-lib-1
+
+## Run deep-dive-app-1.
+
+  > cd ./projects/deep-dive-app-1 
+  > npx ng serve --open
+
+## Test and build deep-dive-lib-1
+
+  > cd ./projects/deep-dive-lib-1
+  > npx ng test deep-dive-lib-1
+  > npx ng lint deep-dive-lib-1
+  > npx ng build deep-dive-lib-1
+
+  Please see https://github.com/angular-eslint/angular-eslint for how to add ESLint configuration to your project.
+
+## Using lib in app.
+
+  > import { DeepDiveLib1Component } from 'deep-dive-lib-1';
+  > import { DeepDiveLib1Service } from 'deep-dive-lib-1';
+
+## Switched to yarn
+
+  > yarn install
+
+  Remove package-lock.json
+
+## Install json-server
+
+  > yarn add -D json-server
+  created 'start-db' to start json-server
+
+## Install Playwright for  ./projects/deep-dive-app-1
+  > yarn create playwright
+
+  Run playwright
+
+  > yarn playwright test
+
+  Added script to run Playwright e2e tests 
+
+  > yarn e2e-deep-dive-app-1
+
+## Install Cypress
+
+  > yarn add -D cypress
+  > npx cypress open -> follow componenet test setup
+  > yarn add -D @angular/cli @angular-devkit/build-angular
+ 
+  Added script to open Cypress
+
+  > yarn cy-open
+
+
+## =================================================
+
+
 ## Development server
 
 To start a local development server, run:
