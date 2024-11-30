@@ -3,5 +3,127 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "deep-dive-app-1": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/deep-dive-app-1",
+      "sourceRoot": "projects/deep-dive-app-1/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/deep-dive-app-1",
+            "index": "projects/deep-dive-app-1/src/index.html",
+            "browser": "projects/deep-dive-app-1/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/deep-dive-app-1/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/deep-dive-app-1/public"
+              }
+            ],
+            "styles": [
+              "projects/deep-dive-app-1/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "deep-dive-app-1:build:production"
+            },
+            "development": {
+              "buildTarget": "deep-dive-app-1:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/deep-dive-app-1/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/deep-dive-app-1/public"
+              }
+            ],
+            "styles": [
+              "projects/deep-dive-app-1/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "deep-dive-lib-1": {
+      "projectType": "library",
+      "root": "projects/deep-dive-lib-1",
+      "sourceRoot": "projects/deep-dive-lib-1/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/deep-dive-lib-1/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/deep-dive-lib-1/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/deep-dive-lib-1/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/deep-dive-lib-1/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
   }
 }
