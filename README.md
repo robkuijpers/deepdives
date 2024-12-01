@@ -71,6 +71,21 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
   > yarn cy-open
 
 
+## Running Angular commands
+
+  > yarn ng build
+
+  Error: Cannot determine project for command.
+  This is a multi-project workspace and more than one project supports this command. Run "ng build [project]" to execute the command for a specific project or change the current working directory to a project directory.
+
+  Available projects are:
+  - deep-dive-app-1
+  - deep-dive-lib-1
+
+  > yarn ng serve deep-dive-app-1 --open
+  > yarn ng build deep-dive-lib-1
+
+
 ## =================================================
 
 
