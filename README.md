@@ -70,7 +70,6 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
   > yarn cy-open
 
-
 ## Running Angular commands
 
   > yarn ng build
@@ -84,6 +83,17 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
   > yarn ng serve deep-dive-app-1 --open
   > yarn ng build deep-dive-lib-1
+
+## Uninstall playwright and Cypress 
+
+  First migrate to an NX workspace the install Playwright and Cypress again using NX.
+
+
+## Migrate to NX
+
+  https://nx.dev/recipes/angular/migration/angular
+  
+
 
 
 ## =================================================
