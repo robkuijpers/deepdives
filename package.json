@@ -8,9 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "start-db": "npx json-server ./projects/json-server/db.json",
-    "e2e-deep-dive-app-1": "yarn playwright test ./projects/deep-dive-app-1/e2e/**.spec.ts",
-    "cy-open": "npx cypress open"
+    "start-db": "npx json-server ./projects/json-server/db.json"
   },
   "private": true,
   "dependencies": {
@@ -30,7 +28,6 @@
     "@angular-devkit/build-angular": "^19.0.2",
     "@angular/cli": "^19.0.2",
     "@angular/compiler-cli": "^19.0.0",
-    "@playwright/test": "^1.49.0",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^22.10.1",
     "angular-eslint": "19.0.0",
@@ -44,7 +41,6 @@
     "ng-packagr": "^19.0.0",
     "typescript": "~5.6.2",
     "typescript-eslint": "8.16.0",
-    "cypress": "^13.16.0",
     "json-server": "^1.0.0-beta.3"
   }
 }

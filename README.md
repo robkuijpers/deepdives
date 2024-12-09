@@ -71,6 +71,16 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
   > yarn cy-open
 
 
+## Uninstall playwright and Cypress 
+
+  First migrate to an NX workspace the install Playwright and Cypress again using NX.
+
+
+## Migrate to NX
+
+  https://nx.dev/recipes/angular/migration/angular
+  
+
 ## =================================================
 
 
