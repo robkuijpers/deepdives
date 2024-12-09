@@ -71,15 +71,20 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
   > yarn cy-open
 
 
-## Uninstall playwright and Cypress 
+## Running Angular commands
 
-  First migrate to an NX workspace the install Playwright and Cypress again using NX.
+  > yarn ng build
 
+  Error: Cannot determine project for command.
+  This is a multi-project workspace and more than one project supports this command. Run "ng build [project]" to execute the command for a specific project or change the current working directory to a project directory.
 
-## Migrate to NX
+  Available projects are:
+  - deep-dive-app-1
+  - deep-dive-lib-1
 
-  https://nx.dev/recipes/angular/migration/angular
-  
+  > yarn ng serve deep-dive-app-1 --open
+  > yarn ng build deep-dive-lib-1
+
 
 ## =================================================
 
